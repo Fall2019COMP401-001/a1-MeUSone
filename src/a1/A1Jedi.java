@@ -21,15 +21,17 @@ public class A1Jedi {
 			String firstName=scan.next();
 			String lastName=scan.next();
 			int numberOfThings=scan.nextInt();
+			ArrayList productset=new ArrayList();
 			for(int c=0;c<numberOfThings;c++) {
-				ArrayList productset=new ArrayList();
 				int instant=scan.nextInt();
 				int indexOfobject=allObject.indexOf(scan.next());
 				allObject.set(indexOfobject+2,(int) allObject.get(indexOfobject+2)+instant);
-				if(productset.contains(allObject.get(indexOfobject))==false) {
-				allObject.set(indexOfobject+3, (int) allObject.get(indexOfobject+3)+1);
-				productset.add(allObject.get(indexOfobject));}
-				}}
+				if(instant>0 && productset.contains(allObject.get(indexOfobject))==false) {
+					productset.add(allObject.get(indexOfobject));
+					allObject.set(indexOfobject+3, (int) allObject.get(indexOfobject+3)+1);
+				}
+				}
+			}
 		for(int c=2;c<allObject.size();c+=4) {
 			if((int)allObject.get(c+1)==0) {
 				System.out.println("No customers bought "+(String)allObject.get(c-2));}
