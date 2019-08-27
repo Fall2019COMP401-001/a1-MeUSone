@@ -22,11 +22,13 @@ public class A1Jedi {
 			String lastName=scan.next();
 			int numberOfThings=scan.nextInt();
 			for(int c=0;c<numberOfThings;c++) {
+				ArrayList productset=new ArrayList();
 				int instant=scan.nextInt();
 				int indexOfobject=allObject.indexOf(scan.next());
-				if(instant!=0) {
 				allObject.set(indexOfobject+2,(int) allObject.get(indexOfobject+2)+instant);
-				allObject.set(indexOfobject+3,(int) allObject.get(indexOfobject+3)+1);}
+				if(productset.contains(allObject.get(indexOfobject))==false) {
+				allObject.set(indexOfobject+3, (int) allObject.get(indexOfobject+3)+1);
+				productset.add(allObject.get(indexOfobject));}
 				}}
 		for(int c=2;c<allObject.size();c+=4) {
 			if((int)allObject.get(c+1)==0) {
