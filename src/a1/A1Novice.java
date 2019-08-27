@@ -19,8 +19,7 @@ public class A1Novice {
 			for(int b=0;b<numberOfThings;b++) {
 			int instant=scan.nextInt();
 			String shiftString=scan.next();
-			sum=sum+instant*scan.nextDouble();
-			}
+			sum=sum+instant*scan.nextDouble();}
 			customInformation[a]=firstName+lastName+": "+String.format("%.2f", sum);
 		}
 		for(int c=0;c<numberOfCustomer;c++) {

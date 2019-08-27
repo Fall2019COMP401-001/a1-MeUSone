@@ -16,8 +16,7 @@ public class A1Jedi {
 			allObject.add(scan.next());
 			allObject.add(scan.nextDouble());
 			allObject.add(0);
-			allObject.add(0);
-		}
+			allObject.add(0);	}
 		int numberOfCustomer=scan.nextInt();
 		for(int b=0;b<numberOfCustomer;b++) {
 			String firstName=scan.next();
